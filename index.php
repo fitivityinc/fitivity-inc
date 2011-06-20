@@ -17,8 +17,8 @@
             <div id="nav">
                 <ul>
                     <li class="current"><span class="current2">Profile</span></li>
-                    <li><a href="about.html">Sports</a></li>
-                    <li><a href="services.html">Challenge</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="404.html">Challenge</a></li>
                     
                 </ul>
             </div><!-- END NAV -->
@@ -26,7 +26,7 @@
 		
 		<div id="header">
 			<div id="logo">
-				<h1><img src="img/banner.png"></h1>
+				<h1><img src="img/banner.png" height="81"></h1>
 				
 				
 			</div>
@@ -60,7 +60,7 @@
         	
         	
         </div><!-- END CONTENT -->
-        	<div class
+        	
         <div id="now">
         	
         	
@@ -74,6 +74,7 @@
 	
 	<div id="footer">
     	<div id="copyright">&copy; 2011 Fitivity Inc. All Rights Reserved.</div>
+		<div id="contact"><a href="404.html"><img src="img/icons/facebook.png"></a>&nbsp;&nbsp;<a href="404.html"><img src="img/icons/linkedin.png"></a>&nbsp;&nbsp;<a href="404.html"><img src="img/icons/twitter.png"></a></div>
     	<div id="versions"><span id="iphone">iPhone Version</span> <span id="normal"><a href="#">Normal Version</a></span></div>
     </div><!-- END FOOTER -->
     
@@ -82,6 +83,6 @@
 		addEventListener('load', function() { setTimeout(hideURLbar, 0) }, false);
 		window.onorientationchange = hideURLbar;
 	</script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="script/jquery.min.js"></script>
 </body>
 </html>
