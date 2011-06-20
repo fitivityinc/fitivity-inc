@@ -1,7 +1,7 @@
 10
 
 dir
-126
+158
 https://pl3.projectlocker.com:443/Fitiviti/webapp/svn/Branch/application/views
 https://pl3.projectlocker.com:443/Fitiviti/webapp/svn
 
@@ -10,8 +10,8 @@ https://pl3.projectlocker.com:443/Fitiviti/webapp/svn
 2011-06-12T05:06:47.424975Z
 114
 fergusonc3@wit.edu
-has-props
-has-prop-mods
+
+
 
 
 
@@ -32,7 +32,7 @@ file
 
 
 
-2011-06-12T10:20:13.000000Z
+2011-06-19T23:57:11.000000Z
 c800ef3e052e63fe7d6de3f3ff35b6f9
 2011-06-12T05:06:47.424975Z
 114
@@ -66,7 +66,7 @@ file
 
 
 
-2011-06-12T10:20:13.000000Z
+2011-06-19T23:57:11.000000Z
 0227cfd904e99656279202032b98d4a7
 2011-06-12T05:06:47.424975Z
 114
