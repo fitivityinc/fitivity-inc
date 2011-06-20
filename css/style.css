@@ -177,12 +177,12 @@ code {
 #featured {
 	margin-top:-20px!important;
 	text-align:center;
-	padding-left:10px;
+	margin-left:25px;
 	float:left;
 }
 #tropheys {
 	margin-top:-20px!important;
-	padding-right:5px;
+	margin-right:25px;
 	 float:right;
 	 text-align:center;
 }
@@ -254,8 +254,25 @@ code {
 /* NOW BUTTONS
 ------------------------------------------------------------ */
 
+#checkin {
+	width: 91%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background:url(img/checkin.png);
+	
+}
+
+#personal {
+	margin-left:1.5px;
+}
+
+#location {
+	margin-left:1.5px;
+}
+
 #map {
 	background:url(img/maps.png);
+	
 }
 
 #contact {
@@ -264,7 +281,7 @@ code {
 
 #now {
 	text-align:left;
-	padding:0 15px 0 10px;
+	padding:0 10px 0 10px;
 }
 
 .button {

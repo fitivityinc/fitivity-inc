@@ -15,17 +15,17 @@ svn:wc:ra_dav:version-url
 V 54
 /Fitiviti/webapp/svn/!svn/ver/137/Branch/img/style.css
 END
-icon-search-black.png
-K 25
-svn:wc:ra_dav:version-url
-V 66
-/Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icon-search-black.png
-END
 banner.png
 K 25
 svn:wc:ra_dav:version-url
 V 55
 /Fitiviti/webapp/svn/!svn/ver/151/Branch/img/banner.png
+END
+icon-search-black.png
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icon-search-black.png
 END
 form-radio-off.png
 K 25
@@ -39,17 +39,17 @@ svn:wc:ra_dav:version-url
 V 62
 /Fitiviti/webapp/svn/!svn/ver/114/Branch/img/form-radio-on.png
 END
-icons-36-black.png
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icons-36-black.png
-END
 icons-18-black.png
 K 25
 svn:wc:ra_dav:version-url
 V 63
 /Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icons-18-black.png
+END
+icons-36-black.png
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icons-36-black.png
 END
 avatar.png
 K 25
@@ -57,17 +57,17 @@ svn:wc:ra_dav:version-url
 V 55
 /Fitiviti/webapp/svn/!svn/ver/137/Branch/img/avatar.png
 END
-icons-36-white.png
-K 25
-svn:wc:ra_dav:version-url
-V 63
-/Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icons-36-white.png
-END
 icons-18-white.png
 K 25
 svn:wc:ra_dav:version-url
 V 63
 /Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icons-18-white.png
+END
+icons-36-white.png
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/Fitiviti/webapp/svn/!svn/ver/114/Branch/img/icons-36-white.png
 END
 work.png
 K 25
