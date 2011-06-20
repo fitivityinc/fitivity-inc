@@ -1,204 +1,316 @@
-<?php
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fitivity Mobile App</title>
+<link href="css/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<script src="script/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="script/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
+	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
+<script src="/phonegap.js" type="text/javascript"></script>
+</head> 
+<body> 
 
-/*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
- *
- * You can load different configurations depending on your
- * current environment. Setting the environment also influences
- * things like logging and error reporting.
- *
- * This can be set to anything, but default usage is:
- *
- *     development
- *     testing
- *     production
- *
- * NOTE: If you change these, also change the error_reporting() code below
- *
- */
-	define('ENVIRONMENT', 'development');
-/*
- *---------------------------------------------------------------
- * ERROR REPORTING
- *---------------------------------------------------------------
- *
- * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
- */
+<!-- TODO: make a login/registration page for new users that uses xAuth -->
 
-if (defined('ENVIRONMENT'))
-{
-	switch (ENVIRONMENT)
-	{
-		case 'development':
-			error_reporting(E_ALL);
-		break;
+<!-- profile page -->
+<div data-role="page" id="profile">
+	<div data-role="header" data-backbtn="false" data-position="fixed">
+		<h1>Profile</h1>
+	</div>
+    
+    
+    <!-- spacing -->
+	<div data-role="content">			
+	</div>
+    <div data-role="content">				
+	</div>
+    <!-- /spacing -->
+    
+    <!-- grid -->
+    <div class="ui-grid-a"> <!-- A 50/50 grid -->
+    
+    	<!-- profile picture -->
+		<div class="ui-block-a" align="center"><strong>Profile picture</strong> will go here</div> <!-- Probably a .png file -->
+        <!-- /profile picture -->
+        
+        <!-- trophy -->
+		<div class="ui-block-b" align="center"><strong>Trophys/Points</strong> will go here</div> <!-- Ditto. TODO: Figure out points/trophy layout -->
+		<!-- /trophy -->
+    </div>
+    <!-- /grid -->
+ 
+ 	<!-- spacing -->
+    <div data-role="content">			
+	</div>
+    <div data-role="content">				
+	</div>
+    <!-- /spacing -->
+    
+    <!-- check-in link --> <!-- Using dialogs allows us to fit more events on a single page -->
+     <div>
+    	<a href="#profile.checkin" data-role="button" data-rel="dialog" data-transition="slideup" data-icon="check">Check-in</a>  
+    </div>
+    <!-- /check-in link -->
+    
+    <!-- spacing -->
+    <div data-role="content">				
+	</div>
+    <div data-role="content">				
+	</div>
+    <!-- /spacing -->
+    
+    <!-- grid -->
+    <div class="ui-grid-a"> <!-- A 50/50 grid -->
+    
+    	<!-- personal info link -->
+		<div class="ui-block-a">
+    		<a href="#profile.info" data-role="button" data-rel="dialog" data-icon="info" data-transition="pop" >Personal Info</a>
+    	</div>
+        <!-- /personal info link -->
+        
+        <!-- my locations link -->
+		<div class="ui-block-b">
+    		<a href="#profile.locations" data-role="button" data-rel="dialog" data-icon="arrow-r" data-transition="pop" >My Locations</a>
+    	</div>
+        <!-- /my locations link -->
+        
+	</div>
+    <!-- /grid -->
 	
-		case 'testing':
-		case 'production':
-			error_reporting(0);
-		break;
+    <!-- spacing -->
+    <div data-role="content">		
+	</div>
+    <div data-role="content">				
+	</div>
+    <!-- /spacing -->
+    
+    <!-- profile footer -->
+	<div data-role="footer" data-id="nav" data-position="inline">
+        
+        <!-- navigation buttons -->
+    	<div data-role="navbar">
+    		<ul> 
+				<li><a href="#profile" data-icon="home" class="ui-btn-active ui-state-persist">Profile</a></li>
+				<li><a href="#sports"  data-icon="star" >Sports</a></li>
+				<li><a href="#challenge"  data-icon="grid" >Challenge</a></li>
+        	</ul>
+		</div>
+    	<!-- /navigation buttons -->
+    
+	</div>
+    <!-- /profile footer -->
+    
+</div>
+<!-- /profile page -->
 
-		default:
-			exit('The application environment is not set correctly.');
-	}
-}
+<!-- profile.checkin page -->
+<div data-role="page" id="profile.checkin">
 
-/*
- *---------------------------------------------------------------
- * SYSTEM FOLDER NAME
- *---------------------------------------------------------------
- *
- * This variable must contain the name of your "system" folder.
- * Include the path if the folder is not in the same  directory
- * as this file.
- *
- */
-	$system_path = 'system';
+	<!-- profile.checkin header -->
+	<div data-role="header">
+		<h1>Check-in</h1>
+	</div>
+    <!-- /profile.checkin header -->
+    
+	<div data-role="content">	<!-- TODO: we need a javascript function, getLocation to access the phone's GPS capabilities -->
+		Content					<!-- TODD: a GET request, getVenues that takes the coodinates from getLocation and queries the database for nearby venues -->   								<!-- TODO: a js function that unparses the data from getVenues and displays it in a listview -->
+        						<!-- TODO: after the availible venues are loaded, user selects one, resulting in a POST request to the database -->
+	</div>
+    
+</div>
+<!-- profile.checkin page -->
 
-/*
- *---------------------------------------------------------------
- * APPLICATION FOLDER NAME
- *---------------------------------------------------------------
- *
- * If you want this front controller to use a different "application"
- * folder then the default one you can set its name here. The folder
- * can also be renamed or relocated anywhere on your server.  If
- * you do, use a full server path. For more info please see the user guide:
- * http://codeigniter.com/user_guide/general/managing_apps.html
- *
- * NO TRAILING SLASH!
- *
- */
-	$application_folder = 'application';
+<!-- profile.info page -->
+<div data-role="page" id="profile.info">
 
-/*
- * --------------------------------------------------------------------
- * DEFAULT CONTROLLER
- * --------------------------------------------------------------------
- *
- * Normally you will set your default controller in the routes.php file.
- * You can, however, force a custom routing by hard-coding a
- * specific controller class/function here.  For most applications, you
- * WILL NOT set your routing here, but it's an option for those
- * special instances where you might want to override the standard
- * routing in a specific front controller that shares a common CI installation.
- *
- * IMPORTANT:  If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
- * specific controller.  Leave the function name blank if you need
- * to call functions dynamically via the URI.
- *
- * Un-comment the $routing array below to use this feature
- *
- */
-	// The directory name, relative to the "controllers" folder.  Leave blank
-	// if your controller is not in a sub-folder within the "controllers" folder
-	// $routing['directory'] = '';
+	<!-- profile.info header -->
+	<div data-role="header">
+		<h1>Personal Info</h1>
+        
+        <!-- edit personal info link -->
+        <a href="#profile.info.edit" data-role="button" data-inline="true" data-transition="slide" data-icon="plus">Edit</a>
+        <!-- /edit personal info link -->
+        
+	</div>
+    <!-- /profile.info header -->
+    
+	<div data-role="content">	<!-- TODO: display cache of personal info -->
+		Content				
+	</div>
+    
+</div>
+<!-- /profile.info page -->
 
-	// The controller class file name.  Example:  Mycontroller.php
-	// $routing['controller'] = '';
+<!-- profile.info.edit page -->
+<div data-role="page" id="profile.info.edit">
+	
+    <!-- profile.info.edit header -->
+	<div data-role="header" data-backbtn="false">
+			<h1>Edit Personal Info<h1>  
+	</div>
+    <!-- /profile.info.edit header -->
+    
+    <!-- infoForm -->
+    <form id="infoForm">
+	<div data-role="content">
+     <ul data-role="listview" data-inset="true" >	
+		<div>
+            Press save to keep changes.
+        </div>
+     
+     	<!-- choose gender -->
+        <div data-role="fieldcontain" align="center">
+			<select name="select-choice-1" id="select-choice-1">
+            	<option>Choose gender </option>
+				<option value="male">Male</option>
+				<option value="female">Female </option>
+			</select>
+		</div>
+        <!-- /choose gender -->
+        
+        <!-- name field -->
+        <div data-role="fieldcontain" align="center">
+    		<input type="text" placeholder="Name" id="name" name="name" value=""/>
+		</div>
+        <!-- /name field -->
+        
+        <div data-role="fieldcontain" align="center">
+    		<input type="text" placeholder="More info" id="moreinfo"  value=""/> <!-- TODO: make an info field for this -->
+		</div>
+        
+        <div data-role="fieldcontain" align="center">
+    		<input type="text" placeholder="More info" id="moreinfo2"  value=""/> <!-- TODO: make an info field for this -->
+		</div>
+        
+        <!-- list of sports -->
+        <div data-role="fieldcontain" align="center">
+        	<label for="select-choice-10" class="select">Choose your favorite sport(s):</label>
+			<select name="select-choice-10" id="select-choice-10" multiple="multiple"  data-native-menu="false" >
+				<option>Choose...</option>
+				<option value="baseball">Baseball</option>
+				<option value="basketball">Basketball</option>
+				<option value="bowling">Bowling</option>
+				<option value="boxing">Boxing</option>
+				<option value="cycling">Cycling</option>
+				<option value="climbing">Climbing</option>
+				<option value="football">Football</option>
+				<option value="gymnastics">Gymnastics</option>
+				<option value="golf">Golf</option>
+				<option value="hockey"> Hockey</option>
+				<option value="karate">Karate</option>
+				<option value="Lacrosse">Lacrosse</option>
+				<option value="rugby">Rugby</option>
+				<option value="soccer">Soccer</option>
+				<option value="swimming">Swimming</option>
+				<option value="tennis">Tennis</option>
+				<option value="volleyball">Volleyball</option>
+				<option value="yoga">Yoga</option>
+			</select>
+		</div>
+        <!-- /list of sports -->
+        
+        <!-- grid -->
+     	<div class="ui-grid-a">
+        
+        	<!-- cancel link -->
+			<div class="ui-block-a">
+    			<a href="#profile" data-role="button" data-transition="flip" >Cancel</a>		
+        	</div>
+            <!-- /cancel link -->
+            
+            <!-- save button -->
+			<div class="ui-block-b">
+   				<input type="submit" data-role="button" value="Save" >	<!-- TODO: funtion that POSTS the new info to the database, links back to Profile -->
+        	</div>
+            <!-- /save button -->
+            
+		</div>
+        <!-- /grid -->
+        
+     </ul>
+    </div>
+    </form>
+    <!-- /infoForm -->
+    
+</div>
 
-	// The controller function you wish to be called.
-	// $routing['function']	= '';
+<!-- my locations page -->
+<div data-role="page" id="profile.locations">
+	<div data-role="header">
+		<h1>My Locations</h1>
+	</div>
+    
+ 	<div data-role="content">	
+		Content		
+	</div>
+</div>
+<!-- /my locations page -->
 
+<div data-role="page" id="sports">
+	<div data-role="header" data-backbtn="false" data-position="fixed">
+		<h1>Sports</h1>
+	</div>
+    
+   
+    
+    <!-- spacing -->
+	<div data-role="content">			
+	</div>
+    <div data-role="content">				
+	</div>
+    <!-- /spacing -->
+    
+	<!-- sports footer -->
+	<div data-role="footer" data-id="nav" data-position="inline">
+    	
+        
+        <!-- navigation buttons -->
+    	<div data-role="navbar">
+    		<ul> 
+				<li><a href="#profile" data-icon="home" >Profile</a></li>
+				<li><a href="#sports"  data-icon="star" class="ui-btn-active ui-state-persist" >Sports</a></li>
+				<li><a href="#challenge"  data-icon="grid" >Challenge</a></li>
+        	</ul>
+		</div>
+    	<!-- /navigation buttons -->
+    
+	</div>
+    <!-- /sports footer -->
+</div>
 
-/*
- * -------------------------------------------------------------------
- *  CUSTOM CONFIG VALUES
- * -------------------------------------------------------------------
- *
- * The $assign_to_config array below will be passed dynamically to the
- * config class when initialized. This allows you to set custom config
- * items or override any default config values found in the config.php file.
- * This can be handy as it permits you to share one application between
- * multiple front controller files, with each file containing different
- * config values.
- *
- * Un-comment the $assign_to_config array below to use this feature
- *
- */
-	// $assign_to_config['name_of_config_item'] = 'value of config item';
+<div data-role="page" id="challenge">
+	<div data-role="header" data-backbtn="false">
+		<h1>Challenge</h1>
+	</div>
+    
+  
+    
+    <!-- spacing -->
+	<div data-role="content">			
+	</div>
+    <div data-role="content">				
+	</div>
+    <!-- /spacing -->
+    
+	<!-- challenge footer -->
+	<div data-role="footer" data-id="nav" data-position="inline">
+    	
+        
+        <!-- navigation buttons -->
+    	<div data-role="navbar">
+    		<ul> 
+				<li><a href="#profile" data-icon="home" >Profile</a></li>
+				<li><a href="#sports"  data-icon="star" >Sports</a></li>
+				<li><a href="#challenge"  data-icon="grid"  class="ui-btn-active ui-state-persist">Challenge</a></li>
+        	</ul>
+		</div>
+    	<!-- /navigation buttons -->
+    
+	</div>
+    <!-- /challenge footer -->
+</div>
 
-
-
-// --------------------------------------------------------------------
-// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
-// --------------------------------------------------------------------
-
-/*
- * ---------------------------------------------------------------
- *  Resolve the system path for increased reliability
- * ---------------------------------------------------------------
- */
-
-	// Set the current directory correctly for CLI requests
-	if (defined('STDIN'))
-	{
-		chdir(dirname(__FILE__));
-	}
-
-	if (realpath($system_path) !== FALSE)
-	{
-		$system_path = realpath($system_path).'/';
-	}
-
-	// ensure there's a trailing slash
-	$system_path = rtrim($system_path, '/').'/';
-
-	// Is the system path correct?
-	if ( ! is_dir($system_path))
-	{
-		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
-	}
-
-/*
- * -------------------------------------------------------------------
- *  Now that we know the path, set the main path constants
- * -------------------------------------------------------------------
- */
-	// The name of THIS file
-	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
-
-	// The PHP file extension
-	define('EXT', '.php');
-
-	// Path to the system folder
-	define('BASEPATH', str_replace("\\", "/", $system_path));
-
-	// Path to the front controller (this file)
-	define('FCPATH', str_replace(SELF, '', __FILE__));
-
-	// Name of the "system folder"
-	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
-
-
-	// The path to the "application" folder
-	if (is_dir($application_folder))
-	{
-		define('APPPATH', $application_folder.'/');
-	}
-	else
-	{
-		if ( ! is_dir(BASEPATH.$application_folder.'/'))
-		{
-			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
-		}
-
-		define('APPPATH', BASEPATH.$application_folder.'/');
-	}
-
-/*
- * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
- * --------------------------------------------------------------------
- *
- * And away we go...
- *
- */
-require_once BASEPATH.'core/CodeIgniter'.EXT;
-
-/* End of file index.php */
-/* Location: ./index.php */
+</body>
+</html>
