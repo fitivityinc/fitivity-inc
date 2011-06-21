@@ -1,13 +1,31 @@
 K 25
 svn:wc:ra_dav:version-url
 V 44
-/Fitiviti/webapp/svn/!svn/ver/164/Branch/img
+/Fitiviti/webapp/svn/!svn/ver/206/Branch/img
+END
+landing.png
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/Fitiviti/webapp/svn/!svn/ver/206/Branch/img/landing.png
+END
+avatar.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/Fitiviti/webapp/svn/!svn/ver/137/Branch/img/avatar.png
 END
 maps.png
 K 25
 svn:wc:ra_dav:version-url
 V 53
 /Fitiviti/webapp/svn/!svn/ver/137/Branch/img/maps.png
+END
+work.png
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/Fitiviti/webapp/svn/!svn/ver/137/Branch/img/work.png
 END
 icon-search-black.png
 K 25
@@ -20,18 +38,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 55
 /Fitiviti/webapp/svn/!svn/ver/151/Branch/img/banner.png
-END
-avatar.png
-K 25
-svn:wc:ra_dav:version-url
-V 55
-/Fitiviti/webapp/svn/!svn/ver/137/Branch/img/avatar.png
-END
-work.png
-K 25
-svn:wc:ra_dav:version-url
-V 53
-/Fitiviti/webapp/svn/!svn/ver/137/Branch/img/work.png
 END
 ajax-loader.png
 K 25

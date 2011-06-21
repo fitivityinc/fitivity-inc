@@ -43,6 +43,7 @@ code {
 #container {
 	width:310px;
 	margin:0 auto;
+	height: auto;
 }
 
 #container h2 {
@@ -228,7 +229,7 @@ code {
 #content {
 	clear:both;
 	text-align:left;
-	margin-top:35px;
+	margin-top:30px;
 	padding:0 10px;
 }
 
@@ -265,7 +266,10 @@ code {
 	margin: 0 auto;
 	margin-bottom: 10px;
 	background:url(img/checkin.png);
-	
+}
+
+#signin{
+	background:url(../img/icons/smile.png);
 }
 
 #personal {
@@ -274,6 +278,7 @@ code {
 
 #location {
 	margin-left:1.5px;
+	/*background:url(../img/icons/smile.png);*/
 }
 
 #map {
@@ -281,13 +286,14 @@ code {
 	
 }
 
-#contact {
+#contact{
 	background:url(img/contact.png);
 }
 
 #now {
 	text-align:left;
 	padding:0 10px 0 10px;
+	margin-top: -40px;
 }
 
 .button {
@@ -323,11 +329,11 @@ code {
 	width:100%;
 	background:#160042/*#1A1A1A*/;
 	color:#FFF;
-	height:110px;
+	height:100px;
 	position:absolute;
 	left:0;
 	border-top:1px solid #3C3C3C;
-	font-size:15px;
+	font-size:13px;
 }
 
 #copyright {
@@ -360,7 +366,7 @@ code {
 
 #normal a {
 	color:#FFF;
-	font-size:14px;
+	font-size:13px;
 	text-decoration:none;
 }
 
